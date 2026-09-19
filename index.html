@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Manifestation Journal — Quantum Visibility Collective</title>
+<meta name="description" content="A daily manifestation journal for women stepping into the light. Script your future, shift your identity, and leave every session with one clear move.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    /* Deep Space */
+    --bg:#12121C;
+    --card:rgba(255,255,255,0.04);
+    --card-elevated:rgba(255,255,255,0.06);
+    --border:rgba(255,255,255,0.08);
+    --divider:rgba(255,255,255,0.08);
+
+    /* Cosmic Purples */
+    --starlight:#B9BAFD;
+    --dream-lavender:#BC99FA;
+    --mystic-purple:#998EEA;
+    --quantum-violet:#8A7AF7;
+
+    /* Stardust Pinks */
+    --rose-quartz:#FAC1E4;
+    --pink-fairy:#FFA9F7;
+    --cosmic-magenta:#E472D2;
+    --orchid-blush:#FBCFEA;
+
+    /* Warm Light */
+    --moonbeam:#FCF0E4;
+    --dusty-rose:#E49BA6;
+    --golden-hour:#FED8AB;
+    --stardust:#FFFCB3;
+
+    /* Quantum Greens */
+    --sage:#D8F0CC;
+    --aqua-mint:#C2ECD6;
+    --quantum-green:#5AF7AE;
+
+    /* Aqua Blues */
+    --crystal-blue:#B8DAF6;
+    --electric-aqua:#4AEDFE;
+    --periwinkle-dream:#87B6FA;
+
+    /* Text roles */
+    --text:#F0EAFF;
+    --muted:rgba(240,234,255,0.55);
+
+    --gradient:linear-gradient(90deg,#B9BAFD,#BC99FA,#8A7AF7,#FFA9F7,#E472D2,#FAC1E4,#FED8AB,#FFFCB3,#5AF7AE,#4AEDFE,#B8DAF6,#87B6FA);
+    --gradient-btn:linear-gradient(90deg,#BC99FA,#8A7AF7,#E472D2,#FFA9F7);
+  }
+
+  html{scroll-behavior:smooth}
+
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Montserrat',sans-serif; font-weight:300; line-height:1.9;
+    min-height:100vh; overflow-x:hidden; position:relative;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* Sparkle stars — always present, always flickering */
+  body::before{
+    content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 18% 28%, rgba(255,169,247,0.55), transparent),
+      radial-gradient(1.2px 1.2px at 62% 68%, rgba(250,193,228,0.45), transparent),
+      radial-gradient(1.5px 1.5px at 82% 22%, rgba(251,207,234,0.50), transparent),
+      radial-gradient(1px 1px at 42% 84%, rgba(255,169,247,0.40), transparent),
+      radial-gradient(1.3px 1.3px at 8% 58%, rgba(250,193,228,0.42), transparent),
+      radial-gradient(1px 1px at 90% 52%, rgba(255,169,247,0.38), transparent),
+      radial-gradient(1.2px 1.2px at 32% 12%, rgba(251,207,234,0.45), transparent),
+      radial-gradient(1.4px 1.4px at 55% 38%, rgba(255,169,247,0.35), transparent),
+      radial-gradient(1px 1px at 72% 90%, rgba(250,193,228,0.40), transparent),
+      radial-gradient(1.2px 1.2px at 25% 70%, rgba(251,207,234,0.35), transparent);
+    background-size:100% 100%;
+    animation:breathe 7s ease-in-out infinite alternate;
+  }
+  @keyframes breathe{0%{opacity:.65}100%{opacity:1}}
+
+  /* ===== TYPOGRAPHY ROLES ===== */
+  .kicker{
+    font-family:'Montserrat',sans-serif; font-weight:500;
+    font-size:0.72rem; letter-spacing:0.24em; text-transform:uppercase;
+    color:var(--cosmic-magenta); display:block; line-height:1.6;
+  }
+  h1,h2,h3,h4{
+    font-family:'DM Serif Display',serif; font-weight:400;
+    letter-spacing:0.005em; color:var(--dream-lavender); line-height:1.15;
+  }
+  h2{font-style:italic}
+  .grad{
+    background:var(--gradient); background-size:200% auto;
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; color:transparent;
+    animation:shimmer 9s linear infinite;
+  }
+  @keyframes shimmer{0%{background-position:0% center}100%{background-position:200% center}}
+  .meta{
+    font-family:'Montserrat',sans-serif; font-weight:500;
+    font-size:0.68rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted);
+  }
+  em,.em{color:var(--orchid-blush);font-style:italic}
+
+  /* ===== COVER ===== */
+  #cover{
+    min-height:100vh; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; text-align:center;
+    padding:48px 24px; position:relative; z-index:1;
+  }
+  .cover-glyph{position:absolute;pointer-events:none;line-height:1}
+  .cover-candle{font-size:52px;margin-bottom:22px}
+  #cover h1{font-size:clamp(2.8rem,9vw,5rem);line-height:1.08;margin-bottom:18px}
+  #cover .kicker{margin-bottom:40px}
+  .cover-box{
+    max-width:490px; background:var(--card); border:1px solid var(--border);
+    border-radius:20px; padding:32px 34px; margin-bottom:40px;
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  }
+  .cover-box p:first-child{font-size:1.02rem;line-height:1.9}
+  .cover-rule{height:2px;width:120px;margin:22px auto;background:var(--gradient);border-radius:2px}
+  .cover-box p:last-child{font-size:.88rem;color:var(--muted);line-height:1.9}
+  #cover .footnote{
+    font-family:'Montserrat',sans-serif;font-weight:500;font-size:.66rem;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:30px;
+  }
+
+  /* ===== APP SHELL ===== */
+  #app{display:none;position:relative;z-index:1}
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(18,18,28,0.92); backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid var(--divider); padding:14px 16px;
+  }
+  .header-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+  .header-top h1{font-size:1.05rem;margin:0;font-style:normal;color:var(--starlight)}
+  .tabs{display:flex;gap:7px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .autosave{
+    text-align:center;padding:12px 0 0;
+    font-family:'Montserrat',sans-serif;font-weight:500;font-size:.62rem;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+  }
+  main{max-width:680px;margin:0 auto;padding:28px 16px 84px}
+
+  /* ===== BUTTONS ===== */
+  .btn{
+    font-family:'Montserrat',sans-serif;font-weight:500;text-transform:uppercase;
+    letter-spacing:.2em;font-size:.72rem;padding:16px 34px;border-radius:999px;
+    border:none;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+    line-height:1.4;white-space:nowrap;
+  }
+  .btn-primary{background:var(--gradient-btn);color:#12121C;font-weight:500}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 0 34px rgba(138,122,247,.45)}
+  .btn-secondary{background:transparent;border:1px solid var(--border);color:var(--text)}
+  .btn-secondary:hover{border-color:var(--dream-lavender);background:rgba(188,153,250,.1)}
+  .btn-sm{font-size:.65rem;padding:10px 22px}
+
+  .tag-btn{
+    background:transparent;border:1px solid var(--border);color:var(--text);
+    font-family:'Montserrat',sans-serif;font-weight:500;font-size:.62rem;
+    letter-spacing:.2em;text-transform:uppercase;padding:9px 18px;border-radius:999px;
+    cursor:pointer;transition:all .25s ease;
+  }
+  .tag-btn:hover{border-color:var(--dream-lavender);background:rgba(188,153,250,.1)}
+  .tag-btn.copied{background:var(--quantum-green);border-color:var(--quantum-green);color:#12121C}
+  .tag-btn.danger{border-color:rgba(228,155,166,.45);color:var(--dusty-rose)}
+  .tag-btn.danger-solid{background:var(--dusty-rose);border-color:var(--dusty-rose);color:#12121C}
+
+  /* ===== CARDS ===== */
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:20px;
+    padding:28px;margin-bottom:22px;
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  }
+  .card.subtle{background:rgba(255,255,255,0.025)}
+  .card-head{display:flex;align-items:center;gap:11px;margin-bottom:20px}
+  .card-head .emoji{font-size:19px;line-height:1}
+  .card-desc{font-size:.84rem;color:var(--muted);margin-bottom:16px;line-height:1.9}
+
+  .section-title{text-align:center;margin-bottom:34px}
+  .section-title .kicker{margin-bottom:14px}
+  .section-title h2{font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.2;margin:0}
+  .section-title .sub{font-size:.85rem;color:var(--muted);margin-top:12px;line-height:1.9}
+
+  .field-label{
+    font-family:'Montserrat',sans-serif;font-weight:500;font-size:.66rem;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--cosmic-magenta);
+    display:block;margin-bottom:11px;
+  }
+
+  /* ===== INPUTS ===== */
+  textarea,input[type=text]{
+    width:100%;padding:16px 18px;border-radius:14px;
+    border:1px solid var(--border);background:rgba(255,255,255,0.03);
+    font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.9;
+    font-size:.9rem;color:var(--text);resize:vertical;outline:none;
+    transition:border-color .3s ease,background .3s ease;
+  }
+  textarea:focus,input[type=text]:focus{border-color:var(--dream-lavender);background:rgba(255,255,255,0.05)}
+  textarea::placeholder,input::placeholder{color:rgba(240,234,255,0.3)}
+
+  .chip-row{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{
+    font-family:'Montserrat',sans-serif;font-weight:500;text-transform:uppercase;
+    letter-spacing:.16em;font-size:.64rem;padding:10px 20px;border-radius:999px;
+    background:transparent;border:1px solid var(--border);color:var(--text);
+    cursor:pointer;transition:all .25s ease;white-space:nowrap;line-height:1.4;
+  }
+  .chip:hover{border-color:var(--dream-lavender);background:rgba(188,153,250,.1)}
+  .chip.active{background:var(--gradient-btn);border-color:transparent;color:#12121C}
+
+  .check-row{display:flex;align-items:center;gap:12px;cursor:pointer;font-size:.88rem;line-height:1.7}
+  .check-row input{accent-color:var(--cosmic-magenta);width:17px;height:17px;cursor:pointer;flex-shrink:0}
+
+  .numbered{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px}
+  .num-badge{
+    min-width:34px;height:34px;border-radius:50%;background:var(--gradient-btn);
+    display:flex;align-items:center;justify-content:center;color:#12121C;
+    font-family:'DM Serif Display',serif;font-size:1rem;margin-top:8px;flex-shrink:0;
+  }
+  .numbered > div{flex:1}
+
+  .script-line{display:flex;gap:12px;align-items:center;margin-bottom:11px}
+  .script-num{
+    font-family:'Montserrat',sans-serif;font-weight:500;font-size:.68rem;
+    letter-spacing:.14em;color:var(--pink-fairy);min-width:26px;flex-shrink:0;
+  }
+  .script-line > div{flex:1}
+
+  /* ===== PULL QUOTE ===== */
+  .crucible{
+    background:rgba(255,255,255,0.03);border-left:2px solid var(--cosmic-magenta);
+    border-radius:0 14px 14px 0;padding:26px 26px 26px 34px;position:relative;margin-bottom:20px;
+  }
+  .crucible p{
+    font-family:'DM Serif Display',serif;font-style:italic;
+    font-size:1.12rem;line-height:1.6;color:var(--orchid-blush);
+  }
+
+  /* ===== PROMPT LIST ===== */
+  .prompt-item{
+    padding:16px 20px;border-radius:14px;cursor:pointer;transition:all .25s ease;
+    background:rgba(255,255,255,0.02);border:1px solid transparent;
+    font-size:.85rem;line-height:1.8;
+  }
+  .prompt-item:hover{background:rgba(255,255,255,0.05)}
+  .prompt-item.active{background:rgba(188,153,250,.1);border-color:var(--dream-lavender)}
+
+  /* ===== SAVE BAR ===== */
+  .save-bar{
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:center;
+    margin-top:32px;padding-top:28px;border-top:1px solid var(--divider);
+  }
+
+  /* ===== ARCHIVE ===== */
+  .search-input{margin-bottom:24px}
+  .entry{
+    background:var(--card);border:1px solid var(--border);border-radius:20px;
+    overflow:hidden;margin-bottom:14px;
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  }
+  .entry-head{padding:18px 22px;cursor:pointer;display:flex;align-items:center;gap:13px}
+  .entry-head:hover{background:rgba(255,255,255,0.03)}
+  .entry-icon{font-size:19px;line-height:1;flex-shrink:0}
+  .entry-info{flex:1;min-width:0}
+  .entry-tags{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap}
+  .entry-tags .kicker{font-size:.62rem;display:inline-block}
+  .entry-preview{font-size:.82rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .entry-chevron{color:var(--dream-lavender);font-size:12px;flex-shrink:0}
+  .entry-body{padding:0 22px 22px;border-top:1px solid var(--divider)}
+  .entry-body pre{
+    font-family:'Montserrat',sans-serif;font-weight:300;font-size:.82rem;line-height:1.9;
+    white-space:pre-wrap;word-break:break-word;margin:18px 0;
+    background:rgba(255,255,255,0.03);padding:18px;border-radius:12px;
+    max-height:400px;overflow:auto;color:var(--text);
+  }
+  .entry-actions{display:flex;flex-wrap:wrap;gap:10px}
+  .bulk{margin-top:40px;text-align:center;padding-top:28px;border-top:1px solid var(--divider)}
+  .bulk .kicker{margin-bottom:16px;color:var(--muted)}
+  .bulk-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .empty{text-align:center;color:var(--muted);font-size:.85rem;line-height:1.9}
+
+  /* ===== GUIDE ===== */
+  .back-link{
+    background:none;border:none;color:var(--dream-lavender);cursor:pointer;
+    font-family:'Montserrat',sans-serif;font-weight:300;font-size:.85rem;
+    margin-bottom:20px;padding:0;letter-spacing:.05em;
+  }
+  .guide-note{
+    margin-top:20px;padding:18px 22px;background:rgba(255,255,255,0.03);
+    border-radius:12px;border-left:2px solid var(--cosmic-magenta);
+    font-size:.82rem;color:var(--muted);line-height:1.9;
+  }
+  .guide-note .aura{color:var(--electric-aqua)}
+  .guide-list p{font-size:.88rem;margin-bottom:14px;line-height:1.9}
+  .guide-list p .name{font-family:'DM Serif Display',serif;color:var(--starlight);font-size:1rem}
+  .principle{
+    display:flex;gap:15px;align-items:flex-start;padding:14px 18px;
+    background:rgba(255,255,255,0.025);border-radius:12px;margin-bottom:11px;
+  }
+  .principle .arrow{color:var(--pink-fairy);flex-shrink:0;font-size:.9rem}
+  .principle .p-name{font-family:'DM Serif Display',serif;color:var(--starlight);font-size:1rem}
+  .principle .p-desc{font-size:.82rem;color:var(--muted);margin-top:3px;line-height:1.85}
+  .faq{padding:18px 22px;background:rgba(255,255,255,0.025);border-radius:14px;margin-bottom:12px}
+  .faq .q{font-family:'DM Serif Display',serif;color:var(--starlight);font-size:1.02rem;margin-bottom:8px}
+  .faq .a{font-size:.82rem;color:var(--muted);line-height:1.9}
+
+  /* ===== TOAST ===== */
+  #toast{
+    position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(140px);
+    background:var(--gradient-btn);color:#12121C;padding:14px 30px;border-radius:999px;
+    font-family:'Montserrat',sans-serif;font-weight:500;text-transform:uppercase;
+    letter-spacing:.18em;font-size:.65rem;z-index:1000;
+    transition:transform .35s ease;box-shadow:0 0 44px rgba(138,122,247,.4);
+  }
+  #toast.show{transform:translateX(-50%) translateY(0)}
+
+  .stack{display:grid;gap:11px}
+  .mb-18{margin-bottom:22px}
+  .chakra-theme{font-size:.8rem;color:var(--orchid-blush);font-style:italic;margin-top:14px}
+  .center{text-align:center}
+  .mb-24{margin-bottom:28px}
+
+  @media (max-width:600px){
+    .card,.crucible{padding:22px}
+    .crucible{padding-left:28px}
+    main{padding:24px 14px 76px}
+  }
+
+  @media print{
+    body::before{display:none}
+    header,.tabs,.save-bar,.entry-actions,.bulk,.autosave,#toast{display:none!important}
+    body{background:#fff;color:#000}
+    .card,.entry{border:1px solid #ccc;background:#fff}
+    h1,h2,h3,.grad{color:#000!important;-webkit-text-fill-color:#000!important;background:none!important;animation:none!important}
+    .kicker{color:#555!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div id="cover">
+  <span class="cover-glyph" style="top:8%;left:12%;font-size:70px;opacity:.07;color:var(--pink-fairy)">✦</span>
+  <span class="cover-glyph" style="bottom:12%;right:8%;font-size:90px;opacity:.06;color:var(--dream-lavender)">☽</span>
+  <span class="cover-glyph" style="top:35%;right:18%;font-size:40px;opacity:.08;color:var(--electric-aqua)">✧</span>
+
+  <div class="cover-candle">🕯️</div>
+  <h1 class="grad">The Manifestation Journal</h1>
+  <span class="kicker">Quantum Visibility Collective</span>
+
+  <div class="cover-box">
+    <p>Manifest your next-level clients, income &amp; impact in 10 minutes a day.</p>
+    <div class="cover-rule"></div>
+    <p>Part altar, part CEO dashboard. Script your future, shift your identity, and leave every session with one clear move.</p>
+  </div>
+
+  <button class="btn btn-primary" id="beginBtn">✦&nbsp;&nbsp;Begin Your Practice</button>
+  <div class="footnote">Visibility · Identity Shifting · Community</div>
+</div>
+
+<!-- ============ APP ============ -->
+<div id="app">
+  <header>
+    <div class="header-top">
+      <h1>🕯️ Manifestation Journal</h1>
+      <button class="btn btn-secondary btn-sm" id="guideBtn">Guide</button>
+    </div>
+    <div class="tabs" id="tabs"></div>
+  </header>
+  <div class="autosave" id="autosave">⟳ Auto-saving draft</div>
+  <main id="content"></main>
+</div>
+
+<div id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ═══════════ DATA ═══════════ */
+  var CHAKRAS = [
+    {name:"Root",emoji:"🔴",theme:"Safety & Foundation"},
+    {name:"Sacral",emoji:"🟠",theme:"Creativity & Flow"},
+    {name:"Solar Plexus",emoji:"🟡",theme:"Power & Confidence"},
+    {name:"Heart",emoji:"💚",theme:"Love & Connection"},
+    {name:"Throat",emoji:"🔵",theme:"Expression & Visibility"},
+    {name:"Third Eye",emoji:"💜",theme:"Intuition & Vision"},
+    {name:"Crown",emoji:"🤍",theme:"Purpose & Surrender"}
+  ];
+
+  var MOODS = ["✨ Expansive","🌸 Soft","🔥 Fired Up","🌊 Flowing","😤 Frustrated",
+               "😰 Anxious","🌙 Reflective","💫 Magnetic","🥱 Low Energy","🦋 Transforming"];
+
+  var PROMPT_BANKS = {
+    "Future Business Self":[
+      "Describe your day as the version of you consistently making your dream income doing soul work you love.",
+      "Your dream client just DM'd you saying your work changed their life. What did they say? How does it feel?",
+      "You just closed out your best month ever. Walk through the moment you saw the numbers.",
+      "You're being interviewed on a top podcast about your success. What are you sharing?",
+      "Your calendar this week is exactly how you designed it. Describe every block.",
+      "You just launched your signature offer and it sold out. What happened in the 24 hours after?",
+      "A mentor you deeply admire reaches out to collaborate. What do they want to create with you?",
+      "You're sitting in your dream workspace. Describe every detail — the light, the sounds, the feeling."
+    ],
+    "Client & Community":[
+      "Who is your soul-aligned client? Describe them as if they're sitting across from you right now.",
+      "Your community just hit a milestone. What are members saying in the comments?",
+      "Describe the moment a client tells you they got the result they came for.",
+      "Your waitlist is full. How does that feel in your body? What shifted to make this your reality?",
+      "You just finished a group call and the energy was electric. What happened on that call?",
+      "A past client referred three new people to you this week. What about your work made them do that?"
+    ],
+    "Money & Abundance":[
+      "What does financial safety feel like in your body? Describe it without using numbers.",
+      "You just raised your prices and people said yes immediately. What belief shifted?",
+      "Money flows to you because ____. Finish this sentence 10 different ways.",
+      "Describe your relationship with money as if money were a person.",
+      "You just made money in your sleep. What system did you build that made that possible?",
+      "Write a thank-you letter to the next $10K that's coming to you."
+    ],
+    "Resistance & Shadow":[
+      "What would you do in your business if you knew no one was watching or judging?",
+      "The fear of being seen is trying to protect you from ____. What's underneath it?",
+      "If your highest self could send you a voice note right now, what would she say about your current block?",
+      "What success are you secretly afraid of? What would your future self say about that fear?",
+      "Where are you playing small because it feels safer? What would bold look like today?",
+      "What belief about yourself did you inherit that was never yours to carry?"
+    ],
+    "Create Your Day":[
+      "How do I want today to FEEL? Name three feelings and one action that creates each.",
+      "If today were the day everything started clicking, what's the one move I'd make?",
+      "What's one courageous thing I can do today that my future self will thank me for?",
+      "Today I am releasing ____ and choosing ____ instead.",
+      "What does my highest self want me to know before I start this day?",
+      "If I trusted that everything was working out, what would I do differently today?"
+    ],
+    "Intuition & Signs":[
+      "Pull a card. What's the message? How does it connect to what you're building right now?",
+      "What recurring sign, symbol, or number have you been seeing?",
+      "Close your eyes for 30 seconds. What image or word comes through? Journal on it without editing.",
+      "What dream have you had recently that might carry a message for your business?",
+      "If your intuition had a voice, what has it been whispering that you've been ignoring?",
+      "What synchronicity showed up this week? What were you thinking about when it appeared?"
+    ]
+  };
+
+  var FAQ = [
+    {q:"What if I miss a day?",a:"Come back without guilt. Consistency matters more than perfection. Even 2 minutes of scripting keeps the thread alive."},
+    {q:"Can I change my desires?",a:"Absolutely. Update your scripts whenever something no longer feels aligned. Growth means your desires grow too."},
+    {q:"How long until things manifest?",a:"Some things shift in days, others in months. The journal accelerates clarity and aligned action — which accelerates results."},
+    {q:"What if I don't believe what I'm writing?",a:"Start with 'I am learning to…' or 'I am open to…' — bridge beliefs are powerful. Your nervous system will catch up."},
+    {q:"Do I have to do every section?",a:"No. The daily script is the non-negotiable core. Everything else is there when you want depth."}
+  ];
+
+  var TAB_META = {
+    daily:{label:"Daily",emoji:"☀️",full:"Daily Sacred Spread"},
+    weekly:{label:"Weekly",emoji:"🗓️",full:"Weekly Vision Spread"},
+    monthly:{label:"Monthly",emoji:"🌙",full:"Monthly Review & Reset"},
+    prompts:{label:"Prompts",emoji:"💡",full:"Prompt Library"},
+    "369":{label:"3/6/9",emoji:"🔮",full:"3/6/9 Method"}
+  };
+
+  function initFor(type){
+    if(type==="daily") return {mood:"",body:"",emotion:"",chakra:"",script:"",feelings:"",action:"",intuition:"",ritualBefore:false,ritualAfter:false};
+    if(type==="weekly") return {period:"",vision:"",mans:["","",""],gratitude:"",valuesCheck:"",evidence:""};
+    if(type==="monthly") return {period:"",manifested:"",actions:"",beliefs:"",nonNeg:"",release:"",nextMonth:""};
+    if(type==="prompts") return {activeCategory:Object.keys(PROMPT_BANKS)[0],selectedPrompt:"",journalEntry:""};
+    if(type==="369") return {focus:"",morning:["","",""],afternoon:["","","","","",""],evening:["","","","","","","","",""],dayInLife:""};
+    return {};
+  }
+
+  /* ═══════════ STORAGE ═══════════ */
+  var PREFIX = "mj:v1:";
+  var storageOK = (function(){
+    try{
+      var k="__mj_test__";
+      window.localStorage.setItem(k,"1");
+      window.localStorage.removeItem(k);
+      return true;
+    }catch(e){ return false; }
+  })();
+
+  function lsGet(key,fallback){
+    if(!storageOK) return fallback;
+    try{
+      var raw = window.localStorage.getItem(PREFIX+key);
+      if(raw===null || raw==="") return fallback;
+      return JSON.parse(raw);
+    }catch(e){ return fallback; }
+  }
+
+  function lsSet(key,val){
+    if(!storageOK) return false;
+    try{ window.localStorage.setItem(PREFIX+key,JSON.stringify(val)); return true; }
+    catch(e){ return false; }
+  }
+
+  function loadDraft(type){
+    var base = initFor(type);
+    var saved = lsGet("draft:"+type,null);
+    if(saved && typeof saved==="object"){
+      for(var k in base){
+        if(Object.prototype.hasOwnProperty.call(saved,k) && saved[k]!==null && saved[k]!==undefined){
+          if(Array.isArray(base[k])){
+            if(Array.isArray(saved[k])){
+              for(var i=0;i<base[k].length;i++){
+                if(typeof saved[k][i]==="string") base[k][i]=saved[k][i];
+              }
+            }
+          } else {
+            base[k]=saved[k];
+          }
+        }
+      }
+    }
+    return base;
+  }
+
+  function loadEntries(){
+    var arr = lsGet("entries",[]);
+    if(!Array.isArray(arr)) return [];
+    return arr.filter(function(e){ return e && e.id && e.type && e.data; });
+  }
+
+  function saveEntries(arr){ return lsSet("entries",arr); }
+
+  /* ═══════════ STATE ═══════════ */
+  var state = {
+    tab:"daily",
+    guide:false,
+    drafts:{
+      daily:loadDraft("daily"),
+      weekly:loadDraft("weekly"),
+      monthly:loadDraft("monthly"),
+      prompts:loadDraft("prompts"),
+      "369":loadDraft("369")
+    },
+    entries:loadEntries(),
+    archive:{ filter:"all", search:"", expanded:null, confirmDelete:null }
+  };
+
+  var saveTimers = {};
+  function queueDraftSave(type){
+    if(saveTimers[type]) clearTimeout(saveTimers[type]);
+    saveTimers[type] = setTimeout(function(){
+      lsSet("draft:"+type,state.drafts[type]);
+    },500);
+  }
+
+  /* ═══════════ HELPERS ═══════════ */
+  function esc(s){
+    return String(s===null||s===undefined?"":s)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+      .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  }
+
+  function fmtLong(ts){
+    return new Date(ts).toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric",hour:"numeric",minute:"2-digit"});
+  }
+  function fmtShort(ts){
+    return new Date(ts).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric",hour:"numeric",minute:"2-digit"});
+  }
+  function stamp(ts){
+    var d = new Date(ts||Date.now());
+    return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);
+  }
+
+  function toast(msg){
+    var t = document.getElementById("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function(){ t.classList.remove("show"); },2600);
+  }
+
+  function copyText(text,btn){
+    function done(){
+      if(btn){
+        var orig = btn.getAttribute("data-label") || btn.textContent;
+        btn.setAttribute("data-label",orig);
+        btn.textContent = "✓ Copied";
+        btn.classList.add("copied");
+        setTimeout(function(){
+          btn.textContent = orig;
+          btn.classList.remove("copied");
+        },2200);
+      }
+      toast("Copied to clipboard");
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(done)["catch"](function(){ fallback(); });
+    } else { fallback(); }
+    function fallback(){
+      try{
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly","");
+        ta.style.position="fixed"; ta.style.top="-1000px";
+        document.body.appendChild(ta);
+        ta.select(); ta.setSelectionRange(0,ta.value.length);
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        done();
+      }catch(e){ toast("Copy failed — select manually"); }
+    }
+  }
+
+  function downloadText(text,filename){
+    try{
+      var blob = new Blob([text],{type:"text/plain;charset=utf-8"});
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url; a.download = filename;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function(){ URL.revokeObjectURL(url); },1500);
+      toast("Download started");
+    }catch(e){ toast("Download failed"); }
+  }
+
+  /* ═══════════ TEXT EXPORT ═══════════ */
+  function formatEntry(type,d,ts){
+    var meta = TAB_META[type] || {full:type};
+    var header = (d && d.period) ? d.period : fmtLong(ts||Date.now());
+    var out = "THE MANIFESTATION JOURNAL\n" + meta.full + " — " + header + "\n";
+    if(d && d.period) out += "Logged: " + fmtLong(ts||Date.now()) + "\n";
+    function sec(t){ return "\n━━━ " + t.toUpperCase() + " ━━━\n"; }
+    function ln(l,v){ return v ? l + ": " + v + "\n" : ""; }
+    function list(title,arr){
+      var any = arr && arr.some(function(x){ return x; });
+      if(!any) return "";
+      var s = sec(title);
+      arr.forEach(function(x,i){ if(x) s += (i+1) + ". " + x + "\n"; });
+      return s;
+    }
+
+    if(type==="daily"){
+      out += sec("Energetic Check-In");
+      out += ln("Mood",d.mood) + ln("Body Sensation",d.body) + ln("Dominant Emotion",d.emotion);
+      if(d.chakra){
+        var c = CHAKRAS.filter(function(x){ return x.name===d.chakra; })[0];
+        out += "Chakra: " + d.chakra + (c ? " — " + c.theme : "") + "\n";
+      }
+      if(d.script) out += sec("Manifestation Script") + d.script + "\n";
+      if(d.feelings) out += sec("Feelings & Embodiment") + d.feelings + "\n";
+      if(d.action) out += sec("Inspired Action") + d.action + "\n";
+      if(d.intuition) out += sec("Intuitive Hits & Signs") + d.intuition + "\n";
+    }
+    else if(type==="weekly"){
+      if(d.vision) out += sec("Vision for the Week") + d.vision + "\n";
+      out += list("Top 3 Manifestations",d.mans);
+      if(d.gratitude) out += sec("Business-Aligned Gratitude") + d.gratitude + "\n";
+      if(d.valuesCheck) out += sec("Values Alignment Check") + d.valuesCheck + "\n";
+      if(d.evidence) out += sec("Evidence & Synchronicities") + d.evidence + "\n";
+    }
+    else if(type==="monthly"){
+      if(d.manifested) out += sec("What Manifested") + d.manifested + "\n";
+      if(d.actions) out += sec("What Moved the Needle") + d.actions + "\n";
+      if(d.beliefs) out += sec("Beliefs That Shifted") + d.beliefs + "\n";
+      if(d.nonNeg) out += sec("What's Now Non-Negotiable") + d.nonNeg + "\n";
+      if(d.release) out += sec("What I'm Releasing") + d.release + "\n";
+      if(d.nextMonth) out += sec("Next Month's Declaration") + d.nextMonth + "\n";
+    }
+    else if(type==="prompts"){
+      if(d.selectedPrompt) out += sec("Prompt") + '"' + d.selectedPrompt + '"\n';
+      if(d.journalEntry) out += sec("Journal Response") + d.journalEntry + "\n";
+    }
+    else if(type==="369"){
+      if(d.focus) out += sec("Focus Statement") + d.focus + "\n";
+      out += list("Morning (3x)",d.morning);
+      out += list("Afternoon (6x)",d.afternoon);
+      out += list("Evening (9x)",d.evening);
+      if(d.dayInLife) out += sec("Day-in-the-Life Script") + d.dayInLife + "\n";
+    }
+    return out.replace(/\s+$/,"");
+  }
+
+  function preview(type,d){
+    var s = "";
+    if(type==="daily") s = d.script || d.mood || "";
+    else if(type==="weekly") s = (d.period ? d.period + " · " : "") + (d.vision || "");
+    else if(type==="monthly") s = (d.period ? d.period + " · " : "") + (d.manifested || "");
+    else if(type==="prompts") s = d.journalEntry || d.selectedPrompt || "";
+    else if(type==="369") s = d.focus || "";
+    s = String(s).replace(/\s+/g," ").trim();
+    if(!s) return "Untitled entry";
+    return s.length > 78 ? s.slice(0,78) + "…" : s;
+  }
+
+  /* ═══════════ RENDER PIECES ═══════════ */
+  function sectionTitle(kicker,plain,accent,sub){
+    return '<div class="section-title">' +
+      (kicker ? '<span class="kicker">'+esc(kicker)+'</span>' : '') +
+      '<h2>'+esc(plain)+' <span class="grad">'+esc(accent)+'</span></h2>' +
+      (sub ? '<div class="sub">'+esc(sub)+'</div>' : '') +
+    '</div>';
+  }
+
+  function card(title,emoji,inner,subtle){
+    return '<div class="card'+(subtle?' subtle':'')+'">' +
+      (title ? '<div class="card-head"><span class="emoji">'+emoji+'</span><span class="kicker">'+esc(title)+'</span></div>' : '') +
+      inner + '</div>';
+  }
+
+  function ta(type,field,placeholder,rows,idx){
+    var d = state.drafts[type];
+    var val = (idx===undefined) ? d[field] : d[field][idx];
+    return '<textarea rows="'+rows+'" placeholder="'+esc(placeholder)+'" ' +
+      'data-type="'+type+'" data-field="'+field+'"' +
+      (idx===undefined ? '' : ' data-idx="'+idx+'"') +
+      '>'+esc(val)+'</textarea>';
+  }
+
+  function ti(type,field,placeholder){
+    return '<input type="text" placeholder="'+esc(placeholder)+'" ' +
+      'data-type="'+type+'" data-field="'+field+'" value="'+esc(state.drafts[type][field])+'">';
+  }
+
+  function periodCard(type,label,desc,placeholder){
+    return card(label,"🗓️",'<div class="card-desc">'+esc(desc)+'</div>'+ti(type,"period",placeholder),true);
+  }
+
+  function saveBar(type){
+    return '<div class="save-bar">' +
+      '<button class="tag-btn" data-act="copy-draft" data-type="'+type+'">Copy Entry</button>' +
+      '<button class="tag-btn" data-act="download-draft" data-type="'+type+'">Download</button>' +
+      '<button class="tag-btn" data-act="print-draft" data-type="'+type+'">Print / PDF</button>' +
+      '<button class="btn btn-primary btn-sm" data-act="save-entry" data-type="'+type+'">Save to Archive</button>' +
+    '</div>';
+  }
+
+  /* ═══════════ VIEWS ═══════════ */
+  function viewDaily(){
+    var d = state.drafts.daily;
+    var today = new Date().toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"});
+    var h = sectionTitle(today,"Daily","Sacred Spread","5–10 minutes · Let this be a ritual, not a task");
+
+    h += card("Opening Ritual","🕯️",
+      '<div class="card-desc">Light a candle, pull a card, or take 3 deep breaths. Mark this as sacred time.</div>' +
+      '<label class="check-row"><input type="checkbox" data-type="daily" data-field="ritualBefore"'+(d.ritualBefore?' checked':'')+'> I\'ve created my sacred space ✨</label>',
+      true);
+
+    var moods = MOODS.map(function(m){
+      return '<button class="chip'+(d.mood===m?' active':'')+'" data-act="set" data-type="daily" data-field="mood" data-value="'+esc(m)+'">'+esc(m)+'</button>';
+    }).join("");
+
+    var chakras = CHAKRAS.map(function(c){
+      return '<button class="chip'+(d.chakra===c.name?' active':'')+'" data-act="set" data-type="daily" data-field="chakra" data-value="'+esc(c.name)+'">'+c.emoji+' '+esc(c.name)+'</button>';
+    }).join("");
+    var theme = "";
+    if(d.chakra){
+      var found = CHAKRAS.filter(function(c){ return c.name===d.chakra; })[0];
+      if(found) theme = '<div class="chakra-theme">'+esc(found.theme)+'</div>';
+    }
+
+    h += card("Energetic Check-In","🌊",
+      '<div class="mb-18"><span class="field-label">Mood</span><div class="chip-row">'+moods+'</div></div>' +
+      '<div class="mb-18"><span class="field-label">Body Sensation</span>'+ta("daily","body","Where do you feel tension? Openness? Warmth?",2)+'</div>' +
+      '<div class="mb-18"><span class="field-label">Dominant Emotion</span>'+ta("daily","emotion","Name the feeling sitting with you right now…",2)+'</div>' +
+      '<div><span class="field-label">Chakra / Energy Theme</span><div class="chip-row">'+chakras+'</div>'+theme+'</div>');
+
+    h += card("Present-Tense Manifestation Script","✍️",
+      '<div class="card-desc">Write your core business desire as if it\'s already real. Be specific — include numbers, feelings, and scenarios.</div>' +
+      ta("daily","script","I am fully booked with soul-aligned clients paying $____ per month…",6));
+
+    h += card("Feelings & Embodiment","🦋",
+      '<div class="card-desc">How does it feel now that it\'s done? Let your nervous system believe this.</div>' +
+      ta("daily","feelings","It feels like warm honey in my chest. My shoulders are relaxed…",5));
+
+    h += card("One Inspired Action for Today","⚡",
+      '<div class="card-desc">Tiny and concrete. What\'s one move your future self would make today?</div>' +
+      ta("daily","action","DM two people who engaged with my last post…",2));
+
+    h += card("Intuitive Hits & Spiritual Signs","🔮",
+      '<div class="card-desc">Card pulls, dreams, recurring numbers, synchronicities.</div>' +
+      ta("daily","intuition","Pulled The Star card today. Keep seeing 1111…",3));
+
+    h += card("Closing Ritual","🙏",
+      '<div class="card-desc">Close your journal, take one breath, and whisper: "It is done. I trust the timing."</div>' +
+      '<label class="check-row"><input type="checkbox" data-type="daily" data-field="ritualAfter"'+(d.ritualAfter?' checked':'')+'> Practice complete — I release it now 🤍</label>',
+      true);
+
+    return h + saveBar("daily");
+  }
+
+  function viewWeekly(){
+    var ws = new Date();
+    var day = ws.getDay();
+    ws.setDate(ws.getDate() - (day===0 ? 6 : day-1));
+    var we = new Date(ws); we.setDate(we.getDate()+6);
+    function f(dt){ return dt.toLocaleDateString("en-US",{month:"short",day:"numeric"}); }
+
+    var h = sectionTitle("Week of "+f(ws)+" – "+f(we),"Weekly","Vision Spread","");
+
+    h += periodCard("weekly","Week You're Reviewing",
+      "Name the week this spread belongs to — leave blank to use today's date.",
+      "e.g., Week of "+f(ws)+" – "+f(we));
+
+    h += card("Vision for the Week","🔭",
+      '<div class="card-desc">What do you want to create, experience, and magnetize this week?</div>' +
+      ta("weekly","vision","This week I am creating… I am visible in… I am attracting…",5));
+
+    var phs = ["e.g., 5 new aligned DMs from potential clients",
+               "e.g., Sign one soul-aligned client at my new price",
+               "e.g., Consistent $10K month from recurring revenue"];
+    var mans = "";
+    for(var i=0;i<3;i++){
+      mans += '<div class="numbered"><div class="num-badge">'+(i+1)+'</div><div>'+ta("weekly","mans",phs[i],2,i)+'</div></div>';
+    }
+    h += card("Top 3 Manifestations","🎯",
+      '<div class="card-desc">Mix low-resistance goals with bigger ones. Specificity builds belief.</div>'+mans);
+
+    h += card("Business-Aligned Gratitude","🙏",
+      '<div class="card-desc">Gratitude for what IS and gratitude in advance for what\'s coming.</div>' +
+      ta("weekly","gratitude","I\'m grateful for the client who renewed this week…",5));
+
+    h += card("Values Alignment Check","💎",
+      '<div class="card-desc">How does this week\'s focus express your soul\'s work?</div>' +
+      ta("weekly","valuesCheck","My offer feels aligned because… My energy is asking me to…",4));
+
+    h += card("Evidence & Synchronicities","✨",
+      '<div class="card-desc">DMs, repeating numbers, unexpected opportunities — track it all.</div>' +
+      ta("weekly","evidence","Tuesday: Someone messaged asking about my services…",5));
+
+    return h + saveBar("weekly");
+  }
+
+  function viewMonthly(){
+    var month = new Date().toLocaleDateString("en-US",{month:"long",year:"numeric"});
+    var h = sectionTitle(month,"Monthly","Review & Reset","Celebrate, calibrate, and set your next intention");
+
+    h += periodCard("monthly","Month You're Reviewing",
+      "Name the month this review covers — leave blank to use today's date.",
+      "e.g., "+month);
+
+    var fields = [
+      ["manifested","What Manifested","🏆","Revenue, clients, confidence shifts, clarity.","This month I manifested…",5],
+      ["actions","What Moved the Needle","📈","Which actions and energy shifts created movement?","The thing that moved the needle most was…",4],
+      ["beliefs","Beliefs That Shifted","🧬","What do you believe now that you didn't 30 days ago?","I used to believe… Now I know…",4],
+      ["nonNeg","What's Now Non-Negotiable","🔥","Standards you're no longer willing to compromise on.","I will no longer… I now require…",4],
+      ["release","What I'm Releasing","🌙","Patterns that no longer serve who you're becoming.","I release the need to…",4],
+      ["nextMonth","Next Month's Declaration","⭐","One powerful paragraph. Present tense, full embodiment.","Next month I am the woman who…",5]
+    ];
+    fields.forEach(function(f){
+      h += card(f[1],f[2],'<div class="card-desc">'+esc(f[3])+'</div>'+ta("monthly",f[0],f[4],f[5]));
+    });
+    return h + saveBar("monthly");
+  }
+
+  function viewPrompts(){
+    var d = state.drafts.prompts;
+    var h = sectionTitle("","Prompt","Library","Pull a prompt and let it guide you");
+
+    var cats = Object.keys(PROMPT_BANKS).map(function(c){
+      return '<button class="chip'+(d.activeCategory===c?' active':'')+'" data-act="set-cat" data-value="'+esc(c)+'">'+esc(c)+'</button>';
+    }).join("");
+    h += '<div class="chip-row center mb-24" style="justify-content:center">'+cats+'</div>';
+    h += '<div class="center mb-24"><button class="btn btn-primary" data-act="random-prompt">Pull a Random Prompt</button></div>';
+
+    if(d.selectedPrompt){
+      h += card("Your Prompt","✨",
+        '<div class="crucible"><p>'+esc(d.selectedPrompt)+'</p></div>' +
+        ta("prompts","journalEntry","Let it flow…",8));
+    }
+
+    var list = (PROMPT_BANKS[d.activeCategory]||[]).map(function(p){
+      return '<div class="prompt-item'+(d.selectedPrompt===p?' active':'')+'" data-act="pick-prompt" data-value="'+esc(p)+'">'+esc(p)+'</div>';
+    }).join("");
+    h += card("All "+d.activeCategory+" Prompts","📚",'<div class="stack">'+list+'</div>');
+
+    if(d.journalEntry) h += saveBar("prompts");
+    return h;
+  }
+
+  function view369(){
+    var d = state.drafts["369"];
+    var h = sectionTitle("","3 / 6 / 9","Method","Focused scripting for one core desire");
+
+    h += card("Your Focus Statement","🎯",
+      '<div class="card-desc">Choose one specific desire and write it as a present-tense statement.</div>' +
+      ta("369","focus","I am consistently earning $10,000/month from my soul-aligned membership community.",2));
+
+    var blocks = [
+      ["morning","Morning","🌅",3,"Write your focus statement 3 times when you wake up. Let it be the first thing your mind holds today."],
+      ["afternoon","Afternoon","☀️",6,"Write it 6 times midday. Feel the desire strengthen. Notice what's shifted since morning."],
+      ["evening","Evening","🌙",9,"Write it 9 times before bed. Let it be the last thought you carry into sleep."]
+    ];
+    blocks.forEach(function(b){
+      var lines = "";
+      for(var i=0;i<b[3];i++){
+        lines += '<div class="script-line"><span class="script-num">'+(i+1)+'.</span><div>' +
+          ta("369",b[0], d.focus || "Your focus statement…",1,i) + '</div></div>';
+      }
+      h += card(b[1]+" — Write "+b[3]+"x",b[2],'<div class="card-desc">'+esc(b[4])+'</div>'+lines);
+    });
+
+    h += card("Day-in-the-Life Script","📖",
+      '<div class="card-desc">Optional: Write a full "day in the life" of the version of you who already has what you scripted above.</div>' +
+      ta("369","dayInLife","I wake up at 7am in my sun-filled apartment…",8),
+      true);
+
+    return h + saveBar("369");
+  }
+
+  function filteredEntries(){
+    var a = state.archive;
+    var q = a.search.toLowerCase();
+    return state.entries.filter(function(e){
+      if(a.filter!=="all" && e.type!==a.filter) return false;
+      if(!q) return true;
+      return formatEntry(e.type,e.data,e.ts).toLowerCase().indexOf(q) !== -1;
+    }).sort(function(x,y){ return new Date(y.ts) - new Date(x.ts); });
+  }
+
+  function viewArchive(){
+    var a = state.archive;
+    var total = state.entries.length;
+    var h = sectionTitle("","Journal","Archive",
+      total + " saved " + (total===1?"entry":"entries") + " · drafts auto-save separately");
+
+    var filters = [["all","All"],["daily","☀️ Daily"],["weekly","🗓️ Weekly"],
+                   ["monthly","🌙 Monthly"],["prompts","💡 Prompts"],["369","🔮 3/6/9"]];
+    h += '<div class="chip-row mb-18" style="justify-content:center">' +
+      filters.map(function(f){
+        return '<button class="chip'+(a.filter===f[0]?' active':'')+'" data-act="arch-filter" data-value="'+f[0]+'">'+f[1]+'</button>';
+      }).join("") + '</div>';
+
+    h += '<input type="text" class="search-input" id="archSearch" placeholder="Search entries…" value="'+esc(a.search)+'">';
+
+    var list = filteredEntries();
+    if(list.length===0){
+      h += '<div class="card"><div class="empty">' +
+        (total===0 ? 'No entries saved yet. Complete a spread and tap “Save to Archive” to start building your history.'
+                   : 'No entries match your search.') +
+        '</div></div>';
+    } else {
+      list.forEach(function(e){
+        var meta = TAB_META[e.type] || {label:e.type,emoji:"📝"};
+        var open = a.expanded===e.id;
+        h += '<div class="entry">' +
+          '<div class="entry-head" data-act="toggle-entry" data-id="'+esc(e.id)+'">' +
+            '<span class="entry-icon">'+meta.emoji+'</span>' +
+            '<div class="entry-info">' +
+              '<div class="entry-tags"><span class="kicker">'+esc(meta.label)+'</span><span class="meta">'+esc(fmtShort(e.ts))+'</span></div>' +
+              '<div class="entry-preview">'+esc(preview(e.type,e.data))+'</div>' +
+            '</div>' +
+            '<span class="entry-chevron">'+(open?"▲":"▼")+'</span>' +
+          '</div>';
+
+        if(open){
+          var txt = formatEntry(e.type,e.data,e.ts);
+          h += '<div class="entry-body">' +
+            '<pre>'+esc(txt)+'</pre>' +
+            '<div class="entry-actions">' +
+              '<button class="tag-btn" data-act="copy-entry" data-id="'+esc(e.id)+'">Copy</button>' +
+              '<button class="tag-btn" data-act="download-entry" data-id="'+esc(e.id)+'">Download</button>' +
+              '<button class="tag-btn" data-act="print-entry" data-id="'+esc(e.id)+'">Print / PDF</button>' +
+              (a.confirmDelete===e.id
+                ? '<button class="tag-btn danger-solid" data-act="confirm-delete" data-id="'+esc(e.id)+'">Confirm Delete</button>' +
+                  '<button class="tag-btn" data-act="cancel-delete">Cancel</button>'
+                : '<button class="tag-btn danger" data-act="ask-delete" data-id="'+esc(e.id)+'">Delete</button>') +
+            '</div></div>';
+        }
+        h += '</div>';
+      });
+    }
+
+    if(total>0){
+      h += '<div class="bulk"><span class="kicker">Bulk Actions</span><div class="bulk-row">' +
+        '<button class="tag-btn" data-act="copy-all">Copy All</button>' +
+        '<button class="tag-btn" data-act="download-all">Download All</button>' +
+        '<button class="tag-btn" data-act="print-all">Print / PDF All</button>' +
+      '</div></div>';
+    }
+    return h;
+  }
+
+  function viewGuide(){
+    var h = '<button class="back-link" data-act="close-guide">← Back</button>';
+
+    h += card("What is Manifestation Journaling?","📖",
+      '<p style="font-size:.88rem;line-height:1.9">Manifestation journaling bridges your inner vision with your outer business reality. It\'s not instant wish fulfillment. It\'s a practice of clarity, emotional alignment, and inspired action — writing your desires as present reality so your nervous system, beliefs, and daily decisions begin to match.</p>' +
+      '<div class="guide-note"><span class="aura">Why it works:</span> Written goals increase achievement. Present-tense scripting trains your brain to recognize opportunities that match your vision.</div>');
+
+    var howTo = [
+      ["Daily Spread","5–10 min — check in, script, feel it, choose one action."],
+      ["Weekly Spread","Set your vision, name top 3 manifestations, track evidence."],
+      ["Monthly Review","Celebrate, note what moved the needle, claim new beliefs."],
+      ["Prompt Library","Pull a prompt for deeper exploration."],
+      ["3/6/9 Method","One core desire: 3x morning, 6x afternoon, 9x evening."],
+      ["Archive","All saved entries — browse, search, copy, export, or delete."]
+    ];
+    h += card("How to Use This Journal","🗺️",
+      '<div class="guide-list">' + howTo.map(function(x){
+        return '<p><span class="name">'+esc(x[0])+'</span> — '+esc(x[1])+'</p>';
+      }).join("") + '</div>');
+
+    var principles = [
+      ["Clarity of desire","Get specific. Numbers, feelings, scenarios."],
+      ["Present-tense writing","Write as if it's already real."],
+      ["Emotional intensity","Feel it while you write it."],
+      ["Repetition","Consistency rewires belief systems."],
+      ["Aligned action","Vision without movement stays a dream."],
+      ["No toxic positivity","Honor where you are AND where you're going."]
+    ];
+    h += card("Key Principles","🔑",
+      principles.map(function(p){
+        return '<div class="principle"><span class="arrow">✦</span><div>' +
+          '<div class="p-name">'+esc(p[0])+'</div><div class="p-desc">'+esc(p[1])+'</div></div></div>';
+      }).join(""));
+
+    h += card("FAQ","💬",
+      FAQ.map(function(f){
+        return '<div class="faq"><div class="q">'+esc(f.q)+'</div><div class="a">'+esc(f.a)+'</div></div>';
+      }).join(""));
+
+    h += card("A Note on Integrity","🤍",
+      '<p style="font-size:.85rem;line-height:1.9">This practice complements real-world strategy and mental health support — it doesn\'t replace either. This is about becoming the clearest, most aligned version of yourself so the right opportunities recognize you. Trust your timing. Honor your humanity. Let it be messy sometimes.</p>');
+
+    if(!storageOK){
+      h += card("Storage Notice","⚠️",
+        '<p style="font-size:.85rem;color:var(--muted);line-height:1.9">Your browser is blocking local storage, so entries won\'t persist between visits. Use <strong>Copy</strong> or <strong>Download</strong> to keep your work. Turning off private browsing usually resolves this.</p>');
+    }
+    return h;
+  }
+
+  /* ═══════════ RENDER ═══════════ */
+  var TABS = [
+    {id:"daily",label:"Daily",emoji:"☀️"},
+    {id:"weekly",label:"Weekly",emoji:"🗓️"},
+    {id:"monthly",label:"Monthly",emoji:"🌙"},
+    {id:"prompts",label:"Prompts",emoji:"💡"},
+    {id:"369",label:"3/6/9",emoji:"🔮"},
+    {id:"archive",label:"Archive",emoji:"📂"}
+  ];
+
+  function renderTabs(){
+    document.getElementById("tabs").innerHTML = TABS.map(function(t){
+      var label = t.label;
+      if(t.id==="archive" && state.entries.length>0) label += " ("+state.entries.length+")";
+      return '<button class="chip'+(state.tab===t.id && !state.guide ?' active':'')+'" data-act="tab" data-value="'+t.id+'">'+t.emoji+' '+esc(label)+'</button>';
+    }).join("");
+  }
+
+  function render(){
+    renderTabs();
+    document.getElementById("guideBtn").textContent = state.guide ? "Close" : "Guide";
+    document.getElementById("tabs").style.display = state.guide ? "none" : "flex";
+    document.getElementById("autosave").style.display =
+      (!state.guide && state.tab!=="archive") ? "block" : "none";
+
+    var html;
+    if(state.guide) html = viewGuide();
+    else if(state.tab==="daily") html = viewDaily();
+    else if(state.tab==="weekly") html = viewWeekly();
+    else if(state.tab==="monthly") html = viewMonthly();
+    else if(state.tab==="prompts") html = viewPrompts();
+    else if(state.tab==="369") html = view369();
+    else html = viewArchive();
+
+    document.getElementById("content").innerHTML = html;
+    bindInputs();
+  }
+
+  /* ═══════════ INPUT BINDING (no re-render while typing) ═══════════ */
+  function bindInputs(){
+    var areas = document.querySelectorAll("#content textarea[data-field]");
+    Array.prototype.forEach.call(areas,function(el){
+      el.addEventListener("input",function(){
+        var type = el.getAttribute("data-type");
+        var field = el.getAttribute("data-field");
+        var idx = el.getAttribute("data-idx");
+        if(idx===null) state.drafts[type][field] = el.value;
+        else state.drafts[type][field][parseInt(idx,10)] = el.value;
+        queueDraftSave(type);
+      });
+    });
+
+    var texts = document.querySelectorAll('#content input[type=text][data-field]');
+    Array.prototype.forEach.call(texts,function(el){
+      el.addEventListener("input",function(){
+        var type = el.getAttribute("data-type");
+        state.drafts[type][el.getAttribute("data-field")] = el.value;
+        queueDraftSave(type);
+      });
+    });
+
+    var boxes = document.querySelectorAll('#content input[type=checkbox][data-field]');
+    Array.prototype.forEach.call(boxes,function(el){
+      el.addEventListener("change",function(){
+        var type = el.getAttribute("data-type");
+        state.drafts[type][el.getAttribute("data-field")] = el.checked;
+        queueDraftSave(type);
+      });
+    });
+
+    var search = document.getElementById("archSearch");
+    if(search){
+      search.addEventListener("input",function(){
+        state.archive.search = search.value;
+        var pos = search.selectionStart;
+        render();
+        var again = document.getElementById("archSearch");
+        if(again){ again.focus(); try{ again.setSelectionRange(pos,pos); }catch(e){} }
+      });
+    }
+  }
+
+  /* ═══════════ PRINT ═══════════ */
+  function printText(title,text){
+    var w = window.open("","_blank");
+    if(!w){ toast("Pop-up blocked — allow pop-ups to print"); return; }
+    w.document.write(
+      '<!DOCTYPE html><html><head><meta charset="utf-8"><title>'+esc(title)+'</title><style>' +
+      'body{font-family:Georgia,"Times New Roman",serif;line-height:1.7;color:#111;max-width:7in;margin:0 auto;padding:0.6in 0.5in;}' +
+      'pre{white-space:pre-wrap;word-break:break-word;font-family:Georgia,serif;font-size:11.5pt;margin:0}' +
+      '@media print{body{padding:0}}' +
+      '</style></head><body><pre>'+esc(text)+'</pre></body></html>'
+    );
+    w.document.close();
+    setTimeout(function(){ try{ w.focus(); w.print(); }catch(e){} },350);
+  }
+
+  function allText(){
+    return filteredEntries().map(function(e){
+      return formatEntry(e.type,e.data,e.ts);
+    }).join("\n\n════════════════════════════════\n\n");
+  }
+
+  function findEntry(id){
+    return state.entries.filter(function(e){ return e.id===id; })[0];
+  }
+
+  /* ═══════════ DELEGATED CLICKS ═══════════ */
+  document.addEventListener("click",function(ev){
+    var el = ev.target.closest ? ev.target.closest("[data-act]") : null;
+    if(!el) return;
+    var act = el.getAttribute("data-act");
+    var type = el.getAttribute("data-type");
+    var val = el.getAttribute("data-value");
+    var id = el.getAttribute("data-id");
+
+    if(act==="tab"){
+      state.tab = val; state.guide = false;
+      state.archive.expanded = null; state.archive.confirmDelete = null;
+      render(); window.scrollTo(0,0);
+    }
+    else if(act==="close-guide"){ state.guide=false; render(); window.scrollTo(0,0); }
+    else if(act==="set"){
+      var field = el.getAttribute("data-field");
+      state.drafts[type][field] = (state.drafts[type][field]===val) ? "" : val;
+      queueDraftSave(type); render();
+    }
+    else if(act==="set-cat"){
+      state.drafts.prompts.activeCategory = val;
+      state.drafts.prompts.selectedPrompt = "";
+      queueDraftSave("prompts"); render();
+    }
+    else if(act==="pick-prompt"){
+      state.drafts.prompts.selectedPrompt = val;
+      queueDraftSave("prompts"); render();
+    }
+    else if(act==="random-prompt"){
+      var pool = PROMPT_BANKS[state.drafts.prompts.activeCategory] || [];
+      if(pool.length){
+        state.drafts.prompts.selectedPrompt = pool[Math.floor(Math.random()*pool.length)];
+        queueDraftSave("prompts"); render();
+      }
+    }
+    else if(act==="copy-draft"){
+      copyText(formatEntry(type,state.drafts[type],Date.now()),el);
+    }
+    else if(act==="download-draft"){
+      downloadText(formatEntry(type,state.drafts[type],Date.now()),"journal-"+type+"-"+stamp()+".txt");
+    }
+    else if(act==="print-draft"){
+      printText("Manifestation Journal — "+TAB_META[type].full, formatEntry(type,state.drafts[type],Date.now()));
+    }
+    else if(act==="save-entry"){
+      var text = formatEntry(type,state.drafts[type],Date.now());
+      if(text.split("\n").length < 3){ toast("Write something first ✍️"); return; }
+      var ts = new Date().toISOString();
+      var copy = JSON.parse(JSON.stringify(state.drafts[type]));
+      state.entries.push({ id:"e"+Date.now()+Math.floor(Math.random()*1000), type:type, ts:ts, data:copy });
+      var ok = saveEntries(state.entries);
+      toast(ok ? "✦ Saved to archive" : "Storage unavailable");
+      renderTabs();
+    }
+    else if(act==="arch-filter"){
+      state.archive.filter = val; state.archive.expanded=null; state.archive.confirmDelete=null; render();
+    }
+    else if(act==="toggle-entry"){
+      state.archive.expanded = (state.archive.expanded===id) ? null : id;
+      state.archive.confirmDelete = null; render();
+    }
+    else if(act==="copy-entry"){
+      var e1 = findEntry(id); if(e1) copyText(formatEntry(e1.type,e1.data,e1.ts),el);
+    }
+    else if(act==="download-entry"){
+      var e2 = findEntry(id);
+      if(e2) downloadText(formatEntry(e2.type,e2.data,e2.ts),"journal-"+e2.type+"-"+stamp(e2.ts)+".txt");
+    }
+    else if(act==="print-entry"){
+      var e3 = findEntry(id);
+      if(e3) printText("Manifestation Journal Entry", formatEntry(e3.type,e3.data,e3.ts));
+    }
+    else if(act==="ask-delete"){ state.archive.confirmDelete = id; render(); }
+    else if(act==="cancel-delete"){ state.archive.confirmDelete = null; render(); }
+    else if(act==="confirm-delete"){
+      state.entries = state.entries.filter(function(e){ return e.id!==id; });
+      saveEntries(state.entries);
+      state.archive.confirmDelete = null; state.archive.expanded = null;
+      toast("Entry deleted"); render();
+    }
+    else if(act==="copy-all"){ copyText(allText(),el); }
+    else if(act==="download-all"){ downloadText(allText(),"journal-archive-"+stamp()+".txt"); }
+    else if(act==="print-all"){ printText("Manifestation Journal — Full Archive", allText()); }
+  });
+
+  /* ═══════════ BOOT ═══════════ */
+  document.getElementById("beginBtn").addEventListener("click",function(){
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("app").style.display = "block";
+    lsSet("started",true);
+    render();
+    window.scrollTo(0,0);
+  });
+
+  document.getElementById("guideBtn").addEventListener("click",function(){
+    state.guide = !state.guide;
+    render();
+    window.scrollTo(0,0);
+  });
+
+  // Returning visitors skip the cover
+  if(lsGet("started",false)===true){
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("app").style.display = "block";
+    render();
+  }
+
+  // Flush pending saves before leaving
+  window.addEventListener("beforeunload",function(){
+    for(var t in state.drafts){ lsSet("draft:"+t,state.drafts[t]); }
+  });
+
+})();
+</script>
+</body>
+</html>
